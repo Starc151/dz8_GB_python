@@ -7,8 +7,11 @@ def get_request_user():
         data = add_entry()
         msg = export_data(data)
         print_log(msg)
-    # elif request == 2:
-
+    elif request == 2:
+        search_entry()
     # elif request == 3:
 
-    # elif request ==4
+    # elif request == 4
+
+    elif request == 5:
+        return 5

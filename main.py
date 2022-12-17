@@ -1,7 +1,11 @@
+import sys
 from controller import *
 
 
 def main():
-    get_request_user()
+    q = get_request_user()
+    if q == 5:
+        sys.exit()
 
-main()
+while 0 != 1:
+    main()
