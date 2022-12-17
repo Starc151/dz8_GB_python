@@ -1,7 +1,6 @@
 
 from model import export_data
 
-
 def request_action_user():
     request = int(input('Выберите действия с записью:\n\
     1. Добавить\n\
@@ -11,10 +10,12 @@ def request_action_user():
     '))
     return request
 
+def print_log(msg):
+    print(msg)
+    
 def add_entry():
     firstName = input('Ведите имя: ')
     lastName = input('Ведите фаилию: ')
     tel = input('Ведите телефон: ')
     data = [firstName, lastName, tel]
-    msg = export_data(data)
-    print(msg)
+    return data
