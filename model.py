@@ -1,3 +1,6 @@
+from view import *
+
+
 def add_data(data_file):
     data_string = ";".join(data_file)+'\n'
     with open('DB.csv', 'a+') as file:
@@ -29,4 +32,13 @@ def del_data(in_data):
        file.write(data_string)
     return 'Данные удалены'
 
-
+def edit_data(in_data):
+    data = find_data(in_data)
+    data_old = [data[0]]
+    data_old_str = ''.join(data_old)
+    print_res(f'Запись для редактирования: {data_old_str.replace(";", " ")}')
+    print_res('Введите новые данные')
+    del_data(in_data)
+    data_new = add_entry()
+    add_data(data_new)
+    return 'Данные успешно перезаписаны!'

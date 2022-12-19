@@ -14,9 +14,11 @@ def get_request_user():
         res = find_data(data)
         answer = 'Найдено:\n'+('\n'.join(res).replace(';', ' '))
         print_res(answer)
-    # elif request == 3:
-    #     data = search_entry()
-    #     res = find_data(data)
+    elif request == 3:
+        data = search_entry()
+        msg =  edit_data(data)
+        print_res(msg)
+        
 
     elif request == 4:
         data = search_entry()
